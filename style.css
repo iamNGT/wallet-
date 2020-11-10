@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.show{
+    width: 100%;
+    height: 45vh;
+    color: #fff;
+    background: url(./background-4966652_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.show .showElt {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+}
+
+#title,#money {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.showincome,.showexpenses {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.showincome{
+    background: rgb(10, 173, 132);
+}
+
+.showexpenses {
+    background: rgb(221, 37, 37);
+}
+
+.showincome .name ,.showexpenses .name{
+    display: block;
+    color: black;
+}
+
+.showincome .price,.showexpenses .price{
+    color: #fff;
+    /* margin-left: 5px; */
+    /* align-self: flex-end; */
+}
+
+
+.formular{
+    background: lightgray;
+    height: 70px;
+    padding: 10px;
+}
+
+.formular #form{
+    display: inline-flex;
+    position: absolute;
+    left: 30%;
+    width: 500px;
+    margin: 5px;
+    justify-content: space-around;
+}
+
+#form #selectOption{
+    width: 50px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#form #name{
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(16, 197, 128);
+}
+
+#form #cost {
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+#form .btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn i{
+    font-size: 42px;
+    color: rgb(16, 197, 128);
+}
+
+.showresult{
+    display: inline-flex;
+    padding: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.showresult .income,.showresult .expenses{
+    overflow-x: auto;
+    margin: 50px;
+    width: 50%;
+}
+
+#tbl-in,#tblin-price{
+    color: lightseagreen;
+}
+
+#tbl-ex,#tblex-price{
+    color: rgb(221, 37, 37);
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+tr{
+    border-bottom: 1px solid gray;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-size: large;
+}
+
+
+
+

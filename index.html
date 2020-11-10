@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Plan</title>
+</head>
+<body>
+    <div class="show">
+        <div class="showElt">
+            <h1 id="title">Lorem ipsum dolor sit amet.</h1>
+            <h1 id="money">+ 0.00</h1>
+            <div class="showincome">
+                <span class="name">INCOME</span>
+                <span class="price"> 0.00</span>
+                <span class="percent"></span>
+            </div>
+            <div class="showexpenses">
+                <span class="name">EXPENSES</span>
+                <span class="price">- 0.00</span>
+                <span class="percent"></span>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="formular">
+            <form action="" id="form">
+                <select name="" id="selectOption">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+                <input type="text" id="name" placeholder="Add description">
+                <input type="number" id="cost" placeholder="value">
+                <button class="btn" type="submit"><i class="fa fa-check-circle"></i></button>
+            </form>
+        </div>
+
+        <div class="showresult">
+            <div class="income">
+                <table>
+                    <tr>
+                        <th id="tbl-in">INCOME</th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-name">Lorem ipsum dolor sit.</td>
+                        <td id="tblin-price">+1000</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="expenses">
+                <table>
+                    <tr>
+                        <th id="tbl-ex">EXPENSES</th>
+                    </tr>
+                    <tr>
+                        <td id="tbl-name">Lorem ipsum dolor sit.</td>
+                        <td id="tblex-price">-1000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
