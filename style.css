@@ -33,6 +33,12 @@ body{
     margin: 5px;
 }
 
+#money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .showincome,.showexpenses {
     display: flex;
     margin: 5px;
@@ -125,28 +131,31 @@ body{
     width: 50%;
 }
 
-#tbl-in,#tblin-price{
+#tbl-in,.tblin-price{
     color: lightseagreen;
 }
 
-#tbl-ex,#tblex-price{
-    color: rgb(221, 37, 37);
-}
-
-table {
-    border-collapse: collapse;
-    width: 80%;
-}
-
-tr{
+.tr-income{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
     border-bottom: 1px solid gray;
 }
 
-th, td {
-    text-align: left;
-    padding: 8px;
-    font-size: large;
+.tr-income:last-child{
+border-bottom: none;
 }
+
+#tbl-ex,.tblex-price{
+    color: rgb(221, 37, 37);
+}
+
+#tbl-in,#tbl-ex{
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+
 
 
 

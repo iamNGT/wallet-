@@ -16,6 +16,9 @@ let price2 = document.querySelector('.showexpenses .price');
 let selectSign = document.getElementById('selectOption');
 let cost = document.getElementById('cost');
 let name = document.getElementById('name');
+const tr_income = document.querySelector('.income');
+const tr_expense = document.querySelector('.expenses');
+
 
 var formular = document.getElementById('form');
 
@@ -30,11 +33,51 @@ formular.addEventListener('submit',function(e) {
         select: selectSign.value
     };
     
+    const incomes = [];
+    const expenses = [];
+    
     if(selectSign.value == '+'){
         
-        price1.innerHTML  = Number(price1.innerText)  + Number(cost.value);
+        price1.innerHTML  = Number(price1.innerText)  + Number(cost.value);   
+        incomes.push(objectForm);
+
+      for(const income of incomes){
+          const inValue = document.createElement('div');
+          tr_income.appendChild(inValue);
+          inValue.classList.add('tr-income');
+          const projName = document.createElement('span');
+          inValue.appendChild(projName);
+          projName.innerHTML = income.project;
+
+          const priceValue = document.createElement('span');
+          inValue.appendChild(priceValue);
+          priceValue.classList.add('tblin-price');
+          priceValue.innerHTML =income.select + income.price;
+         
+      }
+
       
     } else{
-        price2.innerHTML ="- "+ +cost.value; 
+        price2.innerHTML = Number(price2.innerText)  + Number(cost.value); 
+        expenses.push(objectForm);
+
+        for(const expense of expenses){
+            const inValue = document.createElement('div');
+            tr_expense.appendChild(inValue);
+            inValue.classList.add('tr-income');
+            const projName = document.createElement('span');
+            inValue.appendChild(projName);
+            projName.innerHTML = expense.project;
+  
+            const priceValue = document.createElement('span');
+            inValue.appendChild(priceValue);
+            priceValue.classList.add('tblex-price');
+            priceValue.innerHTML = expense.select + expense.price;
+           
+        }
     }
+
+    money.innerHTML = Number(price1.innerText) - Number(price2.innerText);
+
 })
+
