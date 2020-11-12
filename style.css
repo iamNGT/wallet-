@@ -126,6 +126,7 @@ body{
 }
 
 .showresult .income,.showresult .expenses{
+    /* display: none; */
     overflow-x: auto;
     margin: 50px;
     width: 50%;
@@ -153,6 +154,13 @@ border-bottom: none;
 #tbl-in,#tbl-ex{
     margin-bottom: 5px;
     border-bottom: 1px solid gray;
+}
+
+.percentDesign{
+    font-size: 15px;
+    background: rgb(218, 86, 86);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 

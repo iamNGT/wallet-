@@ -3,13 +3,6 @@ let title = document.getElementById('title');
 
 title.innerHTML = "Avaliable Budget on " + (new Date()).toDateString();
 
-let main = document.querySelector('.main');
-
-let showresult = document.createElement('div');
-
-// main.appendChild(showresult);
-
-
 let money = document.getElementById('money');
 let price1 = document.querySelector('.showincome .price');
 let price2 = document.querySelector('.showexpenses .price');
@@ -22,7 +15,7 @@ const tr_expense = document.querySelector('.expenses');
 
 var formular = document.getElementById('form');
 
-
+let expensePercent = document.getElementById('percent');
 
 formular.addEventListener('submit',function(e) {
     e.preventDefault();
@@ -78,6 +71,11 @@ formular.addEventListener('submit',function(e) {
     }
 
     money.innerHTML = Number(price1.innerText) - Number(price2.innerText);
+
+    if(price2.innerText != 0){
+        expensePercent.innerHTML = Math.ceil((Number(price2.innerText) * 100)/Number(price1.innerText)) + "%";
+        expensePercent.classList.add('percentDesign');
+    }
 
 })
 
