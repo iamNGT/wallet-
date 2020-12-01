@@ -13,6 +13,7 @@ const tr_income = document.querySelector('.income');
 const tr_expense = document.querySelector('.expenses');
 
 
+
 var formular = document.getElementById('form');
 
 let expensePercent = document.getElementById('percent');
@@ -54,7 +55,8 @@ formular.addEventListener('submit',function(e) {
         price2.innerHTML = Number(price2.innerText)  + Number(cost.value); 
         expenses.push(objectForm);
 
-        for(const expense of expenses){
+        for(let expense of expenses){
+
             const inValue = document.createElement('div');
             tr_expense.appendChild(inValue);
             inValue.classList.add('tr-income');
@@ -66,9 +68,22 @@ formular.addEventListener('submit',function(e) {
             inValue.appendChild(priceValue);
             priceValue.classList.add('tblex-price');
             priceValue.innerHTML = expense.select + expense.price;
+
+            const percentage = document.createElement('span');
+            inValue.appendChild(percentage);
+            percentage.classList.add('percentDesign');
+            percentage.innerHTML = Math.ceil((Number(expense.price) * 100)/Number(price1.innerText)) + "%";
+            
+            var deleteBtn = document.createElement('span');
+            deleteBtn.innerHTML = 'X';
+            inValue.appendChild(deleteBtn);
+            deleteBtn.classList.add('delete');
            
         }
+
+
     }
+
 
     money.innerHTML = Number(price1.innerText) - Number(price2.innerText);
 

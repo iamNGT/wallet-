@@ -111,12 +111,11 @@ body{
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+    background: rgb(16, 197, 128);
+    border: 1px solid springgreen;
+    color: #fff;
 }
 
-.btn i{
-    font-size: 42px;
-    color: rgb(16, 197, 128);
-}
 
 .showresult{
     display: inline-flex;
@@ -141,6 +140,7 @@ body{
     justify-content: space-between;
     font-size: 20px;
     border-bottom: 1px solid gray;
+    padding: 5px;
 }
 
 .tr-income:last-child{
@@ -161,6 +161,18 @@ border-bottom: none;
     background: rgb(218, 86, 86);
     padding: 5px;
     border-radius: 5px;
+}
+
+.delete {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    color: rgb(221, 37, 37);
+    border: 1px solid rgb(221, 37, 37);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 
